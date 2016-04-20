@@ -2,7 +2,7 @@
 set -e
 
 openssl aes-256-cbc -k "$key" -in id_rsa_bob.enc -out $HOME/id_rsa_bob -d
-chmod 600 id_rsa_bob
+chmod 600 $HOME/id_rsa_bob
 
 openssl aes-256-cbc -k "$key" -in setup_enc.sh.enc -out setup_enc.sh -d
 chmod 700 setup_enc.sh
