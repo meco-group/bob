@@ -9,6 +9,9 @@ chmod 700 setup_enc.sh
 
 source setup_enc.sh
 
+ssh-keyscan github.com >> ~/.ssh/known_hosts
+ssh-keyscan $GATE >> ~/.ssh/known_hosts
+
 bob_get() {
   scp $USER@$GATE:~/repo/$1 .
 }
