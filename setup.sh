@@ -23,5 +23,5 @@ bob_put() {
 
 bob_putdir() {
   ssh -i $HOME/id_rsa_bob $USER@$GATE 'mkdir -p ~/repo/$2'
-  scp -i $HOME/id_rsa_bob -r $1 $USER@$GATE:~/repo/$2
+  scp -i $HOME/id_rsa_bob -r $1/* $USER@$GATE:~/repo/$2
 }
