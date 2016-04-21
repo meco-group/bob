@@ -19,3 +19,7 @@ bob_get() {
 bob_put() {
   scp -i $HOME/id_rsa_bob $1 $USER@$GATE:~/repo/
 }
+
+bob_putdir() {
+  scp -i $HOME/id_rsa_bob -r $1 $USER@$GATE:~/repo/$2
+}
