@@ -17,11 +17,11 @@ bob_get() {
 }
 
 bob_put() {
-  ssh -i $HOME/id_rsa_bob $USER@$GATE 'mkdir -p ~/repo/'
+  ssh -i $HOME/id_rsa_bob $USER@$GATE "mkdir -p ~/repo/"
   scp -i $HOME/id_rsa_bob $1 $USER@$GATE:~/repo/
 }
 
 bob_putdir() {
-  ssh -i $HOME/id_rsa_bob $USER@$GATE 'mkdir -p ~/repo/$2'
+  ssh -i $HOME/id_rsa_bob $USER@$GATE "mkdir -p ~/repo/$2"
   scp -i $HOME/id_rsa_bob -r $1 $USER@$GATE:~/repo/$2
 }
