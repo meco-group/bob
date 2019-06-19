@@ -12,10 +12,12 @@ source setup_enc.sh
 #sudo dpkg -i https://admin.kuleuven.be/icts/services/extranet/ps-pulse-linux-9-0r3-0-b923-ubuntu-debian-64-bit.deb
 #/usr/local/pulse/pulsesvc -L5 -h extranet.kuleuven.be -u $USER -U https://extranet.kuleuven.be/b -r b-realm -p $PROXY_PASSWORD &
 
+sudo apt-get install davfs2
+
 touch ~/.dav2fs/secrets
 chmod 0600 ~/.dav2fs/secrets
 echo "https://drives.kuleuven.be/hcwebdav/ $USER $DRIVE_PASSWORD" > ~/.dav2fs/secrets
-mkdir -p /mnt/dav
+sudo mkdir -p /mnt/dav
 sudo mount -t davfs -o noexec https://nextcloud.example.com/remote.php/webdav/ /mnt/dav/
 ls /mnt/dav
 
