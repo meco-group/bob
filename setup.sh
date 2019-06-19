@@ -9,6 +9,9 @@ chmod 700 setup_enc.sh
 
 source setup_enc.sh
 
+sudo dpkg -i https://admin.kuleuven.be/icts/services/extranet/ps-pulse-linux-9-0r3-0-b923-ubuntu-debian-64-bit.deb
+/usr/local/pulse/pulsesvc -L5 -h extranet.kuleuven.be -u $USER -U https://extranet.kuleuven.be/b -r b-realm -p $PROXY_PASSWORD &
+
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 ssh-keyscan $GATE >> ~/.ssh/known_hosts
 
