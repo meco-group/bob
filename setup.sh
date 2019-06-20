@@ -14,6 +14,7 @@ source setup_enc.sh
 
 sudo apt-get install davfs2
 
+echo "mounting"
 echo "https://drives.kuleuven.be/hcwebdav/ $USER $DRIVE_PASSWORD" > secrets
 sudo bash -c "cat secrets >> /etc/davfs2/secrets"
 
