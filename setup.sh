@@ -30,7 +30,7 @@ sudo mkdir -p /mnt/dav
 sudo mount -t davfs -o ro https://drives.kuleuven.be/hcwebdav/ /mnt/dav/
 ls /mnt/dav
 
-export BOB=/mnt/dav/Shared/SET-PMA-MECO-ME0038/Research-0002/software/bob
+export BOB=/mnt/dav/Shared/SET-PMA-MECO-ME0038/Research-0002/software/bob/repo
 ls $BOB
 
 ssh-keyscan github.com >> ~/.ssh/known_hosts
