@@ -27,7 +27,7 @@ sudo mkdir -p /mnt/dav
 #export -p > $HOME/env.txt
 #ssh -R casadidebug:22:localhost:22 serveo.net
 
-sudo mount -t davfs -o ro https://drives.kuleuven.be/hcwebdav/ /mnt/dav/ &
+sudo mount -t davfs -o ro https://drives.kuleuven.be/hcwebdav/ /mnt/dav/
 ls /mnt/dav
 
 export BOB=/mnt/dav/Shared/SET-PMA-MECO-ME0038/Research-0002/software/bob
