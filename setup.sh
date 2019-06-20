@@ -14,10 +14,10 @@ source setup_enc.sh
 
 sudo apt-get install davfs2
 
-mkdir -p ~/.dav2fs
-touch ~/.dav2fs/secrets
-chmod 0600 ~/.dav2fs/secrets
-echo "https://drives.kuleuven.be/hcwebdav/ $USER $DRIVE_PASSWORD" > ~/.dav2fs/secrets
+mkdir -p /etc/dav2fs
+touch /etc/dav2fs/secrets
+chmod 0600 /etc/dav2fs/secrets
+echo "https://drives.kuleuven.be/hcwebdav/ $USER $DRIVE_PASSWORD" > /etc/dav2fs/secrets
 sudo mkdir -p /mnt/dav
 sudo mount -t davfs -o noexec https://drives.kuleuven.be/hcwebdav/ /mnt/dav/ &
 ls /mnt/dav
