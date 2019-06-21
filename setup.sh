@@ -30,7 +30,7 @@ sudo mkdir -p /mnt/dav
 #export -p > $HOME/env.txt
 #ssh -R casadidebug:22:localhost:22 serveo.net
 
-sudo strace -fp $(cat /var/run/rsyslogd.pid) &
+#sudo strace -fp $(cat /var/run/rsyslogd.pid) &
 
 sudo mount -t davfs -o ro https://drives.kuleuven.be/hcwebdav/ /mnt/dav/
 
