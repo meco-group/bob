@@ -35,7 +35,7 @@ sudo mkdir -p /mnt/dav
 sudo mount -t davfs -o ro https://drives.kuleuven.be/hcwebdav/ /mnt/dav/
 
 
-sudo tail -n 100 /var/log/syslog
+sudo tail -n 200 /var/log/syslog
 
 ls /mnt/dav
 
