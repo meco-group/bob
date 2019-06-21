@@ -7,6 +7,10 @@ chmod 600 $HOME/id_rsa_bob
 openssl aes-256-cbc -k "$key" -in setup_enc.sh.enc -out setup_enc.sh -d
 chmod 700 setup_enc.sh
 
+
+echo "debug ssl" | sudo tee -a  /etc/davfs2/davfs2.conf
+
+
 source setup_enc.sh
 
 #sudo dpkg -i https://admin.kuleuven.be/icts/services/extranet/ps-pulse-linux-9-0r3-0-b923-ubuntu-debian-64-bit.deb
@@ -27,7 +31,12 @@ sudo mkdir -p /mnt/dav
 #ssh -R casadidebug:22:localhost:22 serveo.net
 
 sudo mount -t davfs -o ro https://drives.kuleuven.be/hcwebdav/ /mnt/dav/
-sleep 2
+
+
+tail -n 100 /var/log/messages
+tail -n 100 /var/log/syslog
+tail -n 100 /var/log/daemon.log
+
 ls /mnt/dav
 
 export BOB=/mnt/dav/Shared/SET-PMA-MECO-ME0038/Research-0002/software/bob/repo
