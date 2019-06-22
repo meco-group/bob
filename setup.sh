@@ -33,7 +33,8 @@ sudo mkdir -p /mnt/dav
 #sudo strace -fp $(cat /var/run/rsyslogd.pid) &
 #openssl s_client -connect drives.kuleuven.be:https
 
-sudo tcpdump -nnSX port 443 &
+sudo tcpdump -vvnnSX port 443 &
+sleep 1
 sudo mount -t davfs -o ro https://drives.kuleuven.be/hcwebdav/ /mnt/dav/
 
 
